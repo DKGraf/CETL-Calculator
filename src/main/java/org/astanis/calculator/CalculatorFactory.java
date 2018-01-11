@@ -17,24 +17,6 @@ public class CalculatorFactory {
             file = fileopen.getSelectedFile();
             fileName = file.getName();
         }
-
-//        FileChooser fileChooser = new FileChooser();
-//        fileChooser.setTitle("Open File");
-//
-////        fileChooser.getExtensionFilters().addAll(
-////                new FileChooser.ExtensionFilter("Excel files", "*.xls, *.xlsx*"),
-////                new FileChooser.ExtensionFilter("DBF files", "*.dbf")
-////        );
-//        FileChooser.ExtensionFilter extFilter =
-//                new FileChooser.ExtensionFilter("Excel files", "*.xls");
-//        fileChooser.getExtensionFilters().add(extFilter);
-//        file = fileChooser.showOpenDialog();//Указываем текущую сцену CodeNote.mainStage
-//        String fileName = file.getName();
-//        if (file != null) {
-//            //Open
-//            System.out.println("Процесс открытия файла");
-//        }
-
         int dotIndex = fileName.lastIndexOf('.');
         String extension = fileName.substring(dotIndex).toLowerCase();
         if (".xls".equals(extension)) {
