@@ -18,12 +18,12 @@ public class CalculatorFactory {
             fileName = file.getName();
         }
         int dotIndex = fileName.lastIndexOf('.');
-        String extension = fileName.substring(dotIndex).toLowerCase();
-        if (".xls".equals(extension)) {
+        String extension = fileName.substring(dotIndex);
+        if (".xls".equalsIgnoreCase(extension)) {
             return new XLSCalculator(file);
-        } else if (".xlsx".equals(extension)) {
+        } else if (".xlsx".equalsIgnoreCase(extension)) {
             return new XLSXCalculator(file);
-        } else if (".dbf".equals(extension)) {
+        } else if (".dbf".equalsIgnoreCase(extension)) {
             return new DBFCalculator(file);
         } else {
             throw new NoSuchMethodException("Wrong file format");
